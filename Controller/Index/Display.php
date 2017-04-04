@@ -1,14 +1,21 @@
 <?php
 namespace Advcha\HelloWorld\Controller\Index;
 
-class Display extends \Magento\Framework\App\Action\Action
+use Magento\Framework\App\Action\Action;
+use Magento\Framework\App\Action\Context;
+use Magento\Framework\View\Result\PageFactory;
+
+class Display extends Action
 {
-    public function __construct(\Magento\Framework\App\Action\Context $context){
+    protected $_pageFactory;
+    public function __construct(Context $context, PageFactory $pageFactory){
+        $this->_pageFactory = $pageFactory;
         return parent::__construct($context);
     }
     
     public function execute(){
-        echo 'Hello World!';
-        exit;
+        //echo 'Hello World!';
+        //exit;
+        return $this->_pageFactory->create();
     }
 }
