@@ -1,7 +1,7 @@
 Ref: https://www.mageplaza.com/magento-2-module-development/
 
 Installation:
-1. Download the code and extract it in /app/code/ directoryof your magento website
+1. Download the code and extract it in /app/code/ directory of your magento website
 2. Enable the module
 
    php bin/magento module:enable Advcha_HelloWorld
